@@ -13,7 +13,7 @@ X = np.random.random(
 )
 
 # random target categories for classifier algoritmh
-y = np.random.choise(['yes', 'no'], size=n)
+y = np.random.choice(['yes', 'no'], size=n)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 
@@ -37,6 +37,14 @@ p_test = model.predict(X_test)
 
 acc_train = accuracy_score(y_train, p_train)
 acc_test = accuracy_score(y_test, p_test)
+
+print('Train accuracy: ', acc_train)
+print('Test accuracy: ', acc_test)
+
+"""
+Train accuracy:  1.0
+Test accuracy:  0.48
+"""
 
 # ends in underfitting because the neural network
 # focussed on training data that was totally random
